@@ -3,7 +3,7 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 
 # Projects that will be imported in
   - ArgoCD
-  - Cloud Native Storage Solution
+  - Cloud Native Storage Solution (For Local Dynamic Provisioning)
   - Metallb to access applications via our local network.
   - CI platform like GitLab or Jenkins
   - Container Image Registery
