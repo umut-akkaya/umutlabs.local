@@ -3,3 +3,10 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+components:
+  - ../../../components/openebs/overlays/only-local-pv-provisioner/
+
+# This overlays creates and cluster which includes;
+# - Argo CD
+# - Openebs CNS (Only Local PV Provisioner Engine)
