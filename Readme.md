@@ -5,6 +5,7 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
   - ArgoCD :white_check_mark:
   - Cloud Native Storage Solution (For Local Dynamic Provisioning) :white_check_mark:
   - Metallb to access applications via our local network.
+  - Cloud Native Application Proxy (Traefik or Nginx Reverse Proxy)  
   - CI platform like GitLab or Jenkins
   - Container Image Registery
   - SAST/SAC/DAST tools
