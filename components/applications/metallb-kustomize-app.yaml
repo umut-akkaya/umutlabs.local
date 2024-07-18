@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metallb-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: metallb-system
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: core/metallb/overlay/default
+    repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+    targetRevision: 2-order-of-creation-of-k8s-object
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

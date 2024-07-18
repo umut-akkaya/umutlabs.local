@@ -4,6 +4,7 @@ kind: Component
 resources:
   - ../../base/
 
+
 patches:
   - path: patchip.yaml
   - path: patchadvertise.yaml
