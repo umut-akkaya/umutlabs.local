@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kustomize-guestbook
+    path: core/metallb/overlay/default
     repoURL: https://github.com/umut-akkaya/umutlabs.local.git
     targetRevision: 2-order-of-creation-of-k8s-object
     
