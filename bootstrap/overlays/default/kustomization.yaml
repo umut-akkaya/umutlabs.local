@@ -5,8 +5,7 @@ resources:
   - ../../base
 
 components:
-  - ../../../components/openebs/overlays/only-local-pv-provisioner/
-  - ../../../components/metallb/overlay/default/
+  - ../../../components/applications/
 
 # This overlays creates and cluster which includes;
 # - Argo CD
