@@ -14,3 +14,10 @@ spec:
     path: core/metallb/overlay/default
     repoURL: https://github.com/umut-akkaya/umutlabs.local.git
     targetRevision: 2-order-of-creation-of-k8s-object
+<<<<<<< HEAD
+=======
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+>>>>>>> parent of 9bfd43d (Self heal disabled for testing)
