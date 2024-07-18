@@ -12,3 +12,11 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 | Container Image Registery | - | - |
 | SAST/SAC/DAST tools | - | - |
 | And various configurations to connect all of these projects. | - | - |
+
+# Setup
+Configure your kubectl client and then execute the command below;
+```shell
+until kubectl apply -k https://github.com/umut-akkaya/umutlabs.local/bootstrap/overlays/default/; do sleep 3; done
+```
+
+Depending on your system hardware it might take several minutes to be ready for cluster.
