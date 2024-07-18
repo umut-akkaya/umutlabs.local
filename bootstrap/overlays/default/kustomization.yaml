@@ -6,6 +6,7 @@ resources:
 
 components:
   - ../../../components/applications/
+  - ../../../core/openebs/overlays/only-local-pv-provisioner/
 
 # This overlays creates and cluster which includes;
 # - Argo CD
