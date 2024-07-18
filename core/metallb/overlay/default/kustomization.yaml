@@ -4,6 +4,8 @@ kind: Component
 resources:
   - ../../base/
 
+commonAnnotations:
+  argocd.argoproj.io/hook: Sync
 
 patches:
   - path: patchip.yaml
