@@ -15,8 +15,10 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 
 # Setup
 ## Minikube Installation
-Configure your kubectl client and then execute the commands below;
-
+Start your cluster
+```shell
+minikube start -p profile_name -n 2
+```
 Enable storage provisioner addon
 ```shell
 minikube addons -p profile_name enable storage-provisioner
@@ -33,7 +35,7 @@ kubectl edit configmaps -n metallb-system config
 ```
 
 Then assign your ip addresses
-```
+```yaml
 data:
   config: |
     address-pools:
@@ -58,7 +60,7 @@ kubectl apply -f - -n ingress-nginx
 Then create a tunnel via minikube
 
 ```shell
-minikube service ingress-nginx-controller --url
+minikube service -p profile_name ingress-nginx-controller --url
 ```
 The output port which will be used to access apps. In your host file you need to add apps names to 127.0.0.1 record. Such as 127.0.0.1 gitlab.umutlabs.local. When you want to access to app you need to type browser gitlab.umutlabs.local:PORT_NUMBER
 
