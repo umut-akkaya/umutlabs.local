@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openebs-app
+  name: traefik-app
   namespace: argocd
 spec:
   project: default
   source:
-    chart: openebs
-    repoURL: https://openebs.github.io/openebs
-    targetRevision: "4.1.0"
+    chart: traefik
+    repoURL: https://traefik.github.io/charts
+    targetRevision: "29.0.1"
     helm:
-      releaseName: openebs
+      releaseName: traefik
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: openebs
+    namespace: traefik-v2
   syncPolicy:
     automated:
       prune: true
