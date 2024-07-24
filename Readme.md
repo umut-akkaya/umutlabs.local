@@ -23,47 +23,6 @@ Enable storage provisioner addon
 ```shell
 minikube addons -p profile_name enable storage-provisioner
 ```
-Enable Metallb
-```shell
-minikube addons -p profile_name enable metallb
-```
-
-After metallb setup you need to configure the metallb configmap to assign ip addresses. To accomplish;
-
-```shell
-kubectl edit configmaps -n metallb-system config
-```
-
-Then assign your ip addresses
-```yaml
-data:
-  config: |
-    address-pools:
-    - name: default
-      protocol: layer2
-      addresses:
-      - 172.17.0.50-172.17.0.100
-```
-
-Enable ingress controller to route applications by using ingress resources.
-
-```shell
-minikube addons -p profile_name enable ingress
-```
-
-Then edit your ingress-nginx-controller service to LoadBalancer
-```shell
-k apply view-last-applied -n ingress-nginx svc/ingress-nginx-controller | \
-sed -e "s/type: NodePort/type: LoadBalancer/" | \
-kubectl apply -f - -n ingress-nginx
-```
-Then create a tunnel via minikube
-
-```shell
-minikube service -p profile_name ingress-nginx-controller --url
-```
-The output port which will be used to access apps. In your host file you need to add apps names to 127.0.0.1 record. Such as 127.0.0.1 gitlab.umutlabs.local. When you want to access to app you need to type browser gitlab.umutlabs.local:PORT_NUMBER
-
 ```shell
 until kubectl apply -k https://github.com/umut-akkaya/umutlabs.local/bootstrap/overlays/minikube/; do sleep 3; done
 ```
