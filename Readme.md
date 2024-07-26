@@ -25,7 +25,7 @@ Enable storage provisioner addon
 minikube addons -p profile_name enable storage-provisioner
 ```
 ```shell
-until kubectl apply -k https://github.com/umut-akkaya/umutlabs.local/bootstrap/overlays/minikube/; do sleep 3; done
+until kubectl apply -k umutlabs.local/bootstrap/overlays/minikube/; do sleep 3; done
 ```
 
 Depending on your system specs it might take several minutes for the cluster to be ready.
@@ -34,7 +34,7 @@ Depending on your system specs it might take several minutes for the cluster to 
 Configure your kubectl client and then execute the commands below;
 
 ```shell
-until kubectl apply -k https://github.com/umut-akkaya/umutlabs.local/bootstrap/overlays/default/; do sleep 3; done
+until kubectl apply -k umutlabs.local/bootstrap/overlays/default/; do sleep 3; done
 ```
 
 Depending on your system specs it might take several minutes for the cluster to be ready
