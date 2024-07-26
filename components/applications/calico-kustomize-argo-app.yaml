@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: calico-cni
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: kube-system
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: core/calico
+    repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+    targetRevision: master 
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

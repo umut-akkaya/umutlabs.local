@@ -3,3 +3,4 @@ kind: Component
 
 resources:
   - metallb-kustomize-app.yaml
+  - calico-kustomize-argo-app.yaml
