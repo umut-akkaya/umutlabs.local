@@ -5,9 +5,10 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 | Project Name | Version | Status |
 | ---- | --- | --- |
 | ArgoCD | v2.11.3 | :white_check_mark: |
+| Container Network Inteface | v3.28.0 | :white_check_mark: |
 | Cloud Native Storage Solution (For Local Dynamic Provisioning) | 4.1.0 | :white_check_mark:|
 | Metallb to access applications via our local network (For L2 Advertisement) | v0.14.7 | :white_check_mark: |
-| Cloud Native Application Proxy (Traefik or Nginx Reverse Proxy) | - | - |
+| Cloud Native Application Proxy (Traefik or Nginx Reverse Proxy) | v3.0.4 | :white_check_mark: |
 | CI platform like GitLab or Jenkins | - | - |
 | Container Image Registery | - | - |
 | SAST/SAC/DAST tools | - | - |
