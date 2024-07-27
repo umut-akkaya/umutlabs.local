@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager-app
+  namespace: cert-manager
+spec:
+  source:
+    helm:
+      valuesObject:
+        installCRDs: true
+        crds:
+          enable: true
+        prometheus:
+          enabled: false
