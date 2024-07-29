@@ -6,4 +6,5 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 
 spec:
-  selfSigned: {}
+  ca:
+    secretName: umutlabs-ca-secret
