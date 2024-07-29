@@ -4,6 +4,7 @@ metadata:
   name: argocd.umutlabs.local
   namespace: argocd
 spec:
+  commonName: argocd.umutlabs.local
   dnsNames:
     - argocd.umutlabs.local
   secretName: argocd.umutlabs.local
