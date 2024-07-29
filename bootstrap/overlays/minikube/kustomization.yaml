@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+components:
+  - ../../../components/applications/
+  - ../../../core/traefik/overlays/default
+  - ../../../core/certmanager/helm/overlays/default

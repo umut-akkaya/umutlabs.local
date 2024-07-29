@@ -5,6 +5,18 @@ resources:
   - ../../base/
 
 patches:
-  - path: values.yaml
-  
-  
+  - target:
+      kind: Application
+      name: cert-manager-app
+    patch: |-
+      - op: add
+        path: /spec/sources/0/helm
+        value:
+          valuesObject:
+            installCRDs: true
+            crds:
+              enable: true
+            prometheus:
+              enabled: false
+    
+    
