@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argocd.umutlabs.local
+  namespace: traefik-v2
+spec:
+  dnsNames:
+    - argocd.umutlabs.local
+  secretName: argocd.umutlabs.local
+  issuerRef:
+    name: umutlabs-ca-issuer
+    kind: ClusterIssuer
+    group: cert-manager.io
