@@ -10,10 +10,13 @@ spec:
     namespace: argocd
     server: https://kubernetes.default.svc
   project: default
-  source:
-    path: core/argocd/
-    repoURL: https://github.com/umut-akkaya/umutlabs.local.git
-    targetRevision: feature/automated-certificate-provisioning 
+  sources:
+    - path: core/argocd/
+      repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+      targetRevision: feature/automated-certificate-provisioning
+    - path: bootstrap/base
+      repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+      targetRevision: feature/automated-certificate-provisioning 
   syncPolicy:
     automated:
       prune: true
