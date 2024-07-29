@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager-app
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - chart: cert-manager
+    repoURL: https://charts.jetstack.io
+    targetRevision: "v1.15.1"
+    helm:
+      releaseName: cert-manager
+  - repoURL: 'https://github.com/umut-akkaya/umutlabs.local.git'
+    targetRevision: feature/automated-certificate-provisioning
+    path: core/certmanager/non-helm-resources/base
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: cert-manager
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

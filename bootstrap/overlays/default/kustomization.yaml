@@ -9,6 +9,9 @@ components:
   - ../../../core/openebs/overlays/only-local-pv-provisioner/
   - ../../../core/traefik/overlays/default
   - ../../../core/calico/
+  - ../../../core/certmanager/helm/overlays/default
+  - ../../../core/argocd/
+  
 
 # This overlays creates and cluster which includes;
 # - Argo CD

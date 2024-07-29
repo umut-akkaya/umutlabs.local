@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
   - argocd-ns.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-  - argo-traefik-ingress.yaml
 
 namespace: argocd
 
