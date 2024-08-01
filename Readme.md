@@ -34,6 +34,48 @@ Depending on your system specs it might take several minutes for the cluster to 
 ## On-Prem Installation
 Configure your kubectl client and then execute the commands below;
 
+First create gitlab and cert-manager namespaces
+```shell
+kubectl create ns gitlab cert-manager
+```
+Create secrets for our local CA.
+```shell
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
+```
+Then encode these keys by using base64 command
+
+```shell
+cat cert.pem |  base64 -w 0
+cat key.pem |  base64 -w 0
+```
+Create a new secret file by using these values
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: umutlabs-ca-secret
+  namespace: cert-manager
+data:
+  tls.crt: BASE64 ENCODED cert.pem
+  tls.key: BASE64 ENCODED key.pem
+```
+Also create a secret called secret-custom-ca in gitlab namespace for trusting out CA
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret-custom-ca
+  namespace: gitlab
+data:
+  gitlab.umutlabs.local.crt: BASE64 ENCODED cert.pem
+```
+Clone the repository
+
+```shell
+git clone https://github.com/umut-akkaya/umutlabs.local.git
+```
 ```shell
 until kubectl apply -k umutlabs.local/bootstrap/overlays/default/; do sleep 3; done
 ```
