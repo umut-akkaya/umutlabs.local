@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitlab-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: gitlab
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: core/gitlab
+    repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+    targetRevision: feature/gitlab 
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
