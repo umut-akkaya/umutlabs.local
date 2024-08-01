@@ -12,7 +12,7 @@ spec:
     helm:
       releaseName: cert-manager
   - repoURL: 'https://github.com/umut-akkaya/umutlabs.local.git'
-    targetRevision: feature/automated-certificate-provisioning
+    targetRevision: master
     path: core/certmanager/non-helm-resources/base
   destination:
     server: "https://kubernetes.default.svc"
