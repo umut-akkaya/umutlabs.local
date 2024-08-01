@@ -5,3 +5,4 @@ resources:
   - metallb-kustomize-app.yaml
   - calico-kustomize-argo-app.yaml
   - argocd-app.yaml
+  - gitlab-app.yaml
