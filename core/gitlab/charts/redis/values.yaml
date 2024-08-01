@@ -16,7 +16,7 @@ global:
   ##   - myRegistryKeySecretName
   ##
   imagePullSecrets: []
-  storageClass: ""
+  storageClass: "openebs-hostpath"
   redis:
     password: ""
 
