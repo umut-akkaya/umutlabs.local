@@ -10,7 +10,7 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 | LoadBalancer to access applications via our local network (For L2 Advertisement) | metallb | v0.14.7 | :white_check_mark: |
 | Cloud Native Application Proxy | Traefik | v3.0.4 | :white_check_mark: |
 | Automatic Certificate Signing and Distribute | cert-manager | v1.15.1 | :white_check_mark:  |
-| CI platform like GitLab or Jenkins | - | - | - |
+| CI platform like GitLab or Jenkins | Gitlab | v17.2.0-ee | :white_check_mark: |
 | Container Image Registery | - | - | - |
 | SAST/SAC/DAST tools | - | - | - |
 | And various configurations to connect all of these projects. | - | - | - |
