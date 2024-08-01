@@ -36,7 +36,8 @@ Configure your kubectl client and then execute the commands below;
 
 First create gitlab and cert-manager namespaces
 ```shell
-kubectl create ns gitlab cert-manager
+kubectl create ns gitlab
+kubectl create ns cert-manager
 ```
 Create secrets for our local CA.
 ```shell
