@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
   - issuer.yaml
-  - ca-secret.yaml
