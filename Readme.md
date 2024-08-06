@@ -16,21 +16,6 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 | And various configurations to connect all of these projects. | - | - | - |
 
 # Setup
-## Minikube Installation
-Start your cluster
-```shell
-minikube start -p profile_name -n 2
-```
-Enable storage provisioner addon
-```shell
-minikube addons -p profile_name enable storage-provisioner
-```
-```shell
-until kubectl apply -k umutlabs.local/bootstrap/overlays/minikube/; do sleep 3; done
-```
-
-Depending on your system specs it might take several minutes for the cluster to be ready.
-
 ## On-Prem Installation
 Configure your kubectl client and then execute the commands below;
 
