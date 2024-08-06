@@ -13,10 +13,10 @@ spec:
   sources:
     - path: core/gitlab/chart
       repoURL: https://github.com/umut-akkaya/umutlabs.local.git
-      targetRevision: feature/gitlab 
+      targetRevision: master
     - path: core/gitlab/non-helm-resources
       repoURL: https://github.com/umut-akkaya/umutlabs.local.git
-      targetRevision: feature/gitlab  
+      targetRevision: master 
   syncPolicy:
     automated:
       prune: true
