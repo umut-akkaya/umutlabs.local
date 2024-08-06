@@ -13,10 +13,10 @@ spec:
   sources:
     - path: core/argocd/
       repoURL: https://github.com/umut-akkaya/umutlabs.local.git
-      targetRevision: feature/automated-certificate-provisioning
+      targetRevision: master
     - path: bootstrap/base
       repoURL: https://github.com/umut-akkaya/umutlabs.local.git
-      targetRevision: feature/automated-certificate-provisioning 
+      targetRevision: master
   syncPolicy:
     automated:
       prune: true
