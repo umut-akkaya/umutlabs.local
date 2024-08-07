@@ -1288,6 +1288,11 @@ gitlab-runner:
             BucketLocation = "us-east-1"
             Insecure = false
         {{ end }}
+        [[runners.kubernetes.volumes.secret]]
+          name = "ca-bundle"
+          mount_path = "/etc/gitlab-runner/certs"
+          read_only = true
+          
   podAnnotations:
     gitlab.com/prometheus_scrape: "true"
     gitlab.com/prometheus_port: 9252
