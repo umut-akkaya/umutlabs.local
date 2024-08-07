@@ -748,7 +748,7 @@ global:
       certName: "tls.crt"
 
   ## Timezone for containers.
-  time_zone: UTC
+  time_zone: 'Europe/Istanbul'
 
   ## Global Service Annotations and Labels
   service:
