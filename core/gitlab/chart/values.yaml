@@ -1289,7 +1289,7 @@ gitlab-runner:
             Insecure = false
         {{ end }}
         [[runners.kubernetes.volumes.secret]]
-          name = "ca-bundle"
+          name = "secret-custom-ca"
           mount_path = "/etc/gitlab-runner/certs"
           read_only = true
           
