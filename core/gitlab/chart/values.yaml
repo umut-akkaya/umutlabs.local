@@ -1288,6 +1288,7 @@ gitlab-runner:
             BucketLocation = "us-east-1"
             Insecure = false
         {{ end }}
+        tls-ca-file = "/etc/gitlab-runner/certs/ca.crt"
         [[runners.kubernetes.volumes.secret]]
           name = "secret-custom-ca"
           mount_path = "/etc/gitlab-runner/certs"
