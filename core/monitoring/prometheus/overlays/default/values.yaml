@@ -6,5 +6,5 @@ metadata:
 spec:
   source:
     helm:
-      valuesFiles:
+      valueFiles:
         - core/monitoring/prometheus/overlays/default/prom-values.yaml
