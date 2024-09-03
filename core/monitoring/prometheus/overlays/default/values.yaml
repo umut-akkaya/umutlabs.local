@@ -7,4 +7,4 @@ spec:
   source:
     helm:
       valueFiles:
-        - core/monitoring/prometheus/overlays/default/prom-values.yaml
+        - overlays/default/prom-values.yaml
