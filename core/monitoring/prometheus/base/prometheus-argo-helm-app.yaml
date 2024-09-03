@@ -5,12 +5,15 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    chart: prometheus
+  sources:
+  - chart: prometheus
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: "25.27.0"
     helm:
       releaseName: umutlabs-prometheus
+  - repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+    targetRevision: master
+    ref: values
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitoring

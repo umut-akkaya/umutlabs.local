@@ -5,6 +5,12 @@ resources:
   - ../../base/
 
 patches:
-  - path: values.yaml
-  
-  
+  - target:
+      kind: Application
+      name: prometheus-app
+    patch: |-
+      - op: add
+        path: /spec/sources/0/helm
+        value:
+          valueFiles:
+            - $values/core/monitoring/prometheus/overlays/default/prom-values.yaml
