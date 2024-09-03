@@ -6,4 +6,3 @@ resources:
   - calico-kustomize-argo-app.yaml
   - argocd-app.yaml
   - gitlab-app.yaml
-  - core/monitoring/prometheus/overlays/default/

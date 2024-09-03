@@ -11,6 +11,7 @@ components:
   - ../../../core/calico/
   - ../../../core/certmanager/helm/overlays/default
   - ../../../core/argocd/
+  - ../../../core/monitoring/prometheus/overlays/default
   
 
 # This overlays creates and cluster which includes;
