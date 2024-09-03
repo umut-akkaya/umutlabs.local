@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus-app
+  namespace: argocd
+spec:
+  source:
+    helm:
+      valuesFiles:
+        - core/monitoring/prometheus/overlays/default/prom-values.yaml
