@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-app
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - chart: grafana
+    repoURL: https://grafana.github.io/helm-charts
+    targetRevision: "8.5.0"
+    helm:
+      releaseName: umutlabs-grafana
+  - repoURL: https://github.com/umut-akkaya/umutlabs.local.git
+    targetRevision: master
+    ref: values
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: monitoring
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
