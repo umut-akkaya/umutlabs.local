@@ -5,14 +5,8 @@ resources:
   - ../../base
 
 components:
-  - ../../../components/applications/
-  - ../../../core/openebs/overlays/only-local-pv-provisioner/
-  - ../../../core/traefik/overlays/default
-  - ../../../core/calico/
-  - ../../../core/certmanager/helm/overlays/default
-  - ../../../core/argocd/
-  - ../../../core/monitoring/prometheus/overlays/default
-  - ../../../core/monitoring/grafana/overlays/default
+  - app-of-apps.yaml
+
   
 
 # This overlays creates and cluster which includes;
