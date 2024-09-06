@@ -11,6 +11,5 @@ components:
   - ../../core/openebs/overlays/only-local-pv-provisioner/
   - ../../core/traefik/overlays/default
   - ../../core/certmanager/helm/overlays/default
-  - ../../core/argocd/
   - ../../core/monitoring/prometheus/overlays/default
   - ../../core/monitoring/grafana/overlays/default
