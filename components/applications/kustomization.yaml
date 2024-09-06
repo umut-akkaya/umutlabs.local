@@ -6,6 +6,8 @@ resources:
   - calico-kustomize-argo-app.yaml
   - argocd-app.yaml
   - gitlab-app.yaml
+
+components:
   - ../../core/openebs/overlays/only-local-pv-provisioner/
   - ../../core/traefik/overlays/default
   - ../../core/certmanager/helm/overlays/default

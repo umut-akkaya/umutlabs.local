@@ -3,11 +3,10 @@ kind: Kustomization
 
 resources:
   - ../../base
-
-components:
   - app-of-apps.yaml
 
-  
+components:
+  - ../../../core/calico
 
 # This overlays creates and cluster which includes;
 # - Argo CD
