@@ -4,7 +4,7 @@ IaC representation of DevSecOps Operations Infrastructure. This projects aims to
 # Projects that will be imported in
 | Solution | Project Name | Version | Status |
 | ---- | --- | --- | --- |
-| Continuous Delivery Tool | ArgoCD | v2.11.3 | :white_check_mark: |
+| Continuous Delivery Tool | ArgoCD | v2.12.3 | :white_check_mark: |
 | Container Network Interface | calico | v3.28.0 | :white_check_mark: |
 | Cloud Native Storage Solution (For Local Dynamic Provisioning) | openebs | 4.1.0 | :white_check_mark:|
 | LoadBalancer to access applications via our local network (For L2 Advertisement) | metallb | v0.14.7 | :white_check_mark: |
