@@ -77,7 +77,7 @@ until kubectl apply -k umutlabs.local/bootstrap/overlays/default/; do sleep 3; d
 Depending on your system specs it might take several minutes for the cluster to be ready
 
 ## DNS Issues
-You will encounter an error on gitlab-runner. The workload will try to connect "gitlab.umutlabs.local" but cannot resolve the domain. To overcome this problem an DNS entry must be recorded. There are multiple ways to accomplish this based on your setup. The easiest way adding manual entry to coredns configmap.
+You will encounter an error on gitlab-runner. The workload will try to connect "gitlab.umutlabs.local" but cannot resolve the domain. To overcome this problem an DNS entry must be recorded. There are multiple ways to accomplish this based on your setup. The easiest way is adding manual entry to coredns configmap.
 
 First edit the coredns configmap
 
